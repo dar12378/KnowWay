@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -26,79 +26,84 @@
           </div>
           <div>
             <h1>KnowWay</h1>
-            <p>The smart way to reach the right person</p>
+            <p data-i18n="brandTagline">The smart way to reach the right person</p>
           </div>
         </div>
 
+        <div class="sidebar-tools">
+          <select id="languageSwitcher" class="role-select">
+            <option value="en">English</option>
+            <option value="he">עברית</option>
+          </select>
+        </div>
+
         <nav class="nav">
-          <button class="nav-item active" data-view="dashboard">Dashboard</button>
-          <button class="nav-item" data-view="search">Need Search</button>
-          <button class="nav-item" data-view="routes">Trust Routes</button>
-          <button class="nav-item" data-view="people">People</button>
-          <button class="nav-item" data-view="invites">Invites</button>
-          <button class="nav-item" data-view="messages">Message AI</button>
-          <button class="nav-item" data-view="growth">Growth</button>
-          <button class="nav-item" data-view="security">Security</button>
+          <button class="nav-item active" data-view="dashboard" data-i18n="navDashboard">Dashboard</button>
+          <button class="nav-item" data-view="search" data-i18n="navSearch">Need Search</button>
+          <button class="nav-item" data-view="routes" data-i18n="navRoutes">Trust Routes</button>
+          <button class="nav-item" data-view="people" data-i18n="navPeople">People</button>
+          <button class="nav-item" data-view="invites" data-i18n="navInvites">Invites</button>
+          <button class="nav-item" data-view="messages" data-i18n="navMessages">Message AI</button>
+          <button class="nav-item" data-view="growth" data-i18n="navGrowth">Growth</button>
+          <button class="nav-item" data-view="security" data-i18n="navSecurity">Security</button>
         </nav>
 
         <div class="sidebar-card">
-          <div class="sidebar-card-title">Founder Mode</div>
-          <p>
-            Local-first private MVP with permissions, role logic, invite flow,
-            and safe trust routing.
+          <div class="sidebar-card-title" data-i18n="founderMode">Founder Mode</div>
+          <p data-i18n="founderModeText">
+            Local-first private MVP with permissions, role logic, invite flow, and safe trust routing.
           </p>
-          <button class="primary-btn full">Beta Access</button>
+          <button class="primary-btn full" data-i18n="betaAccess">Beta Access</button>
         </div>
       </aside>
 
       <main class="main-content">
         <header class="topbar glass">
           <div>
-            <div class="eyebrow">Today’s focus</div>
-            <h2>Trust routing, not random networking</h2>
+            <div class="eyebrow" data-i18n="todaysFocus">Today’s focus</div>
+            <h2 data-i18n="topbarTitle">Trust routing, not random networking</h2>
           </div>
           <div class="topbar-actions">
             <button class="ghost-btn" id="menuToggle">☰</button>
-            <button class="ghost-btn" id="exportDataBtn">Export Demo Data</button>
-            <button class="primary-btn" data-switch="invites">Invite People</button>
+            <button class="ghost-btn" id="exportDataBtn" data-i18n="exportData">Export Demo Data</button>
+            <button class="primary-btn" data-switch="invites" data-i18n="invitePeople">Invite People</button>
           </div>
         </header>
 
         <section class="view active" id="dashboard-view">
           <div class="hero-card">
             <div class="hero-copy">
-              <span class="hero-badge">New category: human trust routing</span>
-              <h3>Find the right person through the right path.</h3>
-              <p>
-                KnowWay helps you identify the best trusted route, the best
-                connector, and the best message to make something real happen.
+              <span class="hero-badge" data-i18n="heroBadge">New category: human trust routing</span>
+              <h3 data-i18n="heroTitle">Find the right person through the right path.</h3>
+              <p data-i18n="heroText">
+                KnowWay helps you identify the best trusted route, the best connector, and the best message to make something real happen.
               </p>
               <div class="hero-actions">
-                <button class="primary-btn" data-switch="search">Start a request</button>
-                <button class="ghost-btn" data-switch="messages">Generate intro message</button>
+                <button class="primary-btn" data-switch="search" data-i18n="startRequest">Start a request</button>
+                <button class="ghost-btn" data-switch="messages" data-i18n="generateIntroMessage">Generate intro message</button>
               </div>
             </div>
 
             <div class="hero-stats">
               <div class="metric-card">
-                <span>Trust graph health</span>
+                <span data-i18n="trustGraphHealth">Trust graph health</span>
                 <strong id="healthMetric">91%</strong>
                 <div class="meter"><div id="healthBar" style="width:91%"></div></div>
               </div>
               <div class="metric-card">
-                <span>Warm intro success</span>
+                <span data-i18n="warmIntroSuccess">Warm intro success</span>
                 <strong>74%</strong>
                 <div class="meter"><div style="width:74%"></div></div>
               </div>
               <div class="metric-card">
-                <span>People in graph</span>
+                <span data-i18n="peopleInGraph">People in graph</span>
                 <strong id="peopleMetric">0</strong>
-                <small>saved locally on this device</small>
+                <small data-i18n="savedLocally">saved locally on this device</small>
               </div>
               <div class="metric-card">
-                <span>Pending invites</span>
+                <span data-i18n="pendingInvites">Pending invites</span>
                 <strong id="inviteMetric">0</strong>
-                <small>invite-only growth</small>
+                <small data-i18n="inviteOnlyGrowth">invite-only growth</small>
               </div>
             </div>
           </div>
@@ -106,21 +111,25 @@
           <div class="grid-2 dashboard-cards">
             <section class="panel">
               <div class="panel-head">
-                <h3>Top trust routes</h3>
-                <span class="tag dark">Live local demo</span>
+                <h3 data-i18n="topTrustRoutes">Top trust routes</h3>
+                <span class="tag dark" data-i18n="liveLocalDemo">Live local demo</span>
               </div>
               <div id="routeCards" class="stack"></div>
             </section>
 
             <section class="panel">
               <div class="panel-head">
-                <h3>Quick add person</h3>
+                <h3 data-i18n="quickAddPerson">Quick add person</h3>
               </div>
 
               <form id="personForm" class="form-grid">
                 <input id="personName" type="text" placeholder="Full name" required />
                 <input id="personRole" type="text" placeholder="Role / title" required />
+                <input id="personEmail" type="email" placeholder="Email" required />
+                <input id="personPhone" type="text" placeholder="Phone" required />
+                <input id="personCompany" type="text" placeholder="Company / organization" />
                 <input id="personStrength" type="text" placeholder="Best use case / strength" required />
+
                 <select id="personTrust" required>
                   <option value="">Trust score</option>
                   <option value="95">95</option>
@@ -130,18 +139,29 @@
                   <option value="75">75</option>
                   <option value="70">70</option>
                 </select>
+
                 <select id="personSpeed" required>
                   <option value="">Response speed</option>
                   <option value="Fast">Fast</option>
                   <option value="Medium">Medium</option>
                   <option value="Slow">Slow</option>
                 </select>
+
                 <textarea
                   id="personNotes"
                   placeholder="Notes: how you know them, what kind of intros they like, etc."
                   required
                 ></textarea>
-                <button class="primary-btn" type="submit">Add person</button>
+
+                <div class="contacts-box">
+                  <div class="panel-head compact-head">
+                    <h4 data-i18n="linkedContacts">Linked contacts</h4>
+                    <button class="ghost-btn small-btn" type="button" id="addContactBtn">+ Add contact</button>
+                  </div>
+                  <div id="contactsList" class="stack"></div>
+                </div>
+
+                <button class="primary-btn" type="submit" data-i18n="addPerson">Add person</button>
               </form>
             </section>
           </div>
@@ -151,14 +171,13 @@
           <div class="panel big-panel">
             <div class="panel-head">
               <div>
-                <div class="eyebrow">Tell KnowWay what you need</div>
-                <h3>What do you need right now?</h3>
+                <div class="eyebrow" data-i18n="tellNeed">Tell KnowWay what you need</div>
+                <h3 data-i18n="whatNeedNow">What do you need right now?</h3>
               </div>
             </div>
 
-            <p class="subtext">
-              Write a real need. KnowWay suggests the best path based on trust,
-              response likelihood, and relationship quality.
+            <p class="subtext" data-i18n="searchText">
+              Write a real need. KnowWay suggests the best path based on trust, response likelihood, and relationship quality.
             </p>
 
             <textarea
@@ -170,14 +189,14 @@
             <div class="chip-row" id="suggestionsRow"></div>
 
             <div class="action-row">
-              <button class="primary-btn" id="analyzeBtn">Analyze trust routes</button>
-              <button class="ghost-btn" id="clearNeedBtn">Clear</button>
+              <button class="primary-btn" id="analyzeBtn" data-i18n="analyzeRoutes">Analyze trust routes</button>
+              <button class="ghost-btn" id="clearNeedBtn" data-i18n="clear">Clear</button>
             </div>
           </div>
 
           <div class="panel hidden" id="searchResultPanel">
             <div class="panel-head">
-              <h3>Best route found</h3>
+              <h3 data-i18n="bestRouteFound">Best route found</h3>
               <span class="tag success" id="confidenceTag">92% confidence</span>
             </div>
 
@@ -186,7 +205,7 @@
             <div id="resultPath" class="path-row"></div>
 
             <div class="recommendation-box">
-              <strong>Recommended move</strong>
+              <strong data-i18n="recommendedMove">Recommended move</strong>
               <p id="resultRecommendation"></p>
             </div>
           </div>
@@ -194,7 +213,7 @@
 
         <section class="view" id="routes-view">
           <div class="panel-head outer-head">
-            <h3>Trust Routes</h3>
+            <h3 data-i18n="trustRoutes">Trust Routes</h3>
           </div>
           <div class="grid-2" id="routesGrid"></div>
         </section>
@@ -203,8 +222,8 @@
           <div class="panel">
             <div class="panel-head wrap-mobile">
               <div>
-                <h3>People intelligence</h3>
-                <p class="subtext">
+                <h3 data-i18n="peopleIntelligence">People intelligence</h3>
+                <p class="subtext" data-i18n="peopleIntelligenceText">
                   Your private relationship graph with strengths, trust, and usage notes.
                 </p>
               </div>
@@ -219,7 +238,7 @@
 
           <div class="panel">
             <div class="panel-head wrap-mobile">
-              <h3>Role-based visibility</h3>
+              <h3 data-i18n="roleVisibility">Role-based visibility</h3>
               <select id="roleSelector" class="role-select">
                 <option value="guest">Guest</option>
                 <option value="user" selected>User</option>
@@ -238,7 +257,7 @@
           <div class="grid-2">
             <div class="panel">
               <div class="panel-head">
-                <h3>Invite people</h3>
+                <h3 data-i18n="invitePeoplePanel">Invite people</h3>
               </div>
 
               <form id="inviteForm" class="form-grid">
@@ -255,32 +274,32 @@
                   placeholder="Why are you inviting this person?"
                   required
                 ></textarea>
-                <button type="submit" class="primary-btn">Send invite</button>
+                <button type="submit" class="primary-btn" data-i18n="sendInvite">Send invite</button>
               </form>
             </div>
 
             <div class="panel">
               <div class="panel-head">
-                <h3>Invite strategy</h3>
+                <h3 data-i18n="inviteStrategy">Invite strategy</h3>
               </div>
               <div class="info-box">
-                <h4>Start closed</h4>
-                <p>Invite only people who can create real outcomes, not random users.</p>
+                <h4 data-i18n="startClosed">Start closed</h4>
+                <p data-i18n="startClosedText">Invite only people who can create real outcomes, not random users.</p>
               </div>
               <div class="info-box">
-                <h4>Pick one niche first</h4>
-                <p>Founders, recruiters, dealmakers, parents groups, or local professionals.</p>
+                <h4 data-i18n="pickOneNiche">Pick one niche first</h4>
+                <p data-i18n="pickOneNicheText">Founders, recruiters, dealmakers, parents groups, or local professionals.</p>
               </div>
               <div class="info-box">
-                <h4>Sell outcome</h4>
-                <p>“We help you reach the right person through the right path.”</p>
+                <h4 data-i18n="sellOutcome">Sell outcome</h4>
+                <p data-i18n="sellOutcomeText">“We help you reach the right person through the right path.”</p>
               </div>
             </div>
           </div>
 
           <div class="panel">
             <div class="panel-head">
-              <h3>Pending invites</h3>
+              <h3 data-i18n="pendingInvitesTitle">Pending invites</h3>
             </div>
             <div id="invitesList" class="stack"></div>
           </div>
@@ -290,7 +309,7 @@
           <div class="message-layout">
             <div class="panel narrow-panel">
               <div class="panel-head">
-                <h3>Message types</h3>
+                <h3 data-i18n="messageTypes">Message types</h3>
               </div>
               <div class="stack" id="messageTypeList"></div>
             </div>
@@ -298,10 +317,10 @@
             <div class="panel">
               <div class="panel-head wrap-mobile">
                 <div>
-                  <div class="eyebrow">AI message generator</div>
+                  <div class="eyebrow" data-i18n="aiMessageGenerator">AI message generator</div>
                   <h3 id="messagePanelTitle">Warm Intro</h3>
                 </div>
-                <button class="primary-btn" id="rewriteMessageBtn">Rewrite stronger</button>
+                <button class="primary-btn" id="rewriteMessageBtn" data-i18n="rewriteStronger">Rewrite stronger</button>
               </div>
               <textarea id="messageOutput" class="message-output"></textarea>
             </div>
@@ -312,8 +331,8 @@
           <div class="panel">
             <div class="panel-head wrap-mobile">
               <div>
-                <h3>Growth plan</h3>
-                <p class="subtext">How to get real users into KnowWay.</p>
+                <h3 data-i18n="growthPlan">Growth plan</h3>
+                <p class="subtext" data-i18n="growthPlanText">How to get real users into KnowWay.</p>
               </div>
             </div>
           </div>
@@ -323,32 +342,31 @@
           <div class="grid-2">
             <div class="panel">
               <div class="panel-head">
-                <h3>How to bring users</h3>
+                <h3 data-i18n="howToBringUsers">How to bring users</h3>
               </div>
-              <div class="bullet-box">Invite-only beta for 20 strong users.</div>
-              <div class="bullet-box">Give each user one real win in the first week.</div>
-              <div class="bullet-box">Use community leaders and connectors first.</div>
-              <div class="bullet-box">Every intro should create another user.</div>
+              <div class="bullet-box" data-i18n="bringUsers1">Invite-only beta for 20 strong users.</div>
+              <div class="bullet-box" data-i18n="bringUsers2">Give each user one real win in the first week.</div>
+              <div class="bullet-box" data-i18n="bringUsers3">Use community leaders and connectors first.</div>
+              <div class="bullet-box" data-i18n="bringUsers4">Every intro should create another user.</div>
             </div>
 
             <div class="panel">
               <div class="panel-head">
-                <h3>Sales script</h3>
+                <h3 data-i18n="salesScript">Sales script</h3>
               </div>
               <div class="info-box">
-                <h4>Short pitch</h4>
-                <p>
-                  “KnowWay helps you reach the right person through the right
-                  person, instead of guessing and sending cold messages.”
+                <h4 data-i18n="shortPitch">Short pitch</h4>
+                <p data-i18n="shortPitchText">
+                  “KnowWay helps you reach the right person through the right person, instead of guessing and sending cold messages.”
                 </p>
               </div>
               <div class="info-box">
-                <h4>Best first markets</h4>
-                <p>Founders, recruiters, partnerships, real estate, private communities.</p>
+                <h4 data-i18n="bestFirstMarkets">Best first markets</h4>
+                <p data-i18n="bestFirstMarketsText">Founders, recruiters, partnerships, real estate, private communities.</p>
               </div>
               <div class="info-box">
-                <h4>Conversion trigger</h4>
-                <p>Show one real intro or one real outcome, not a feature list.</p>
+                <h4 data-i18n="conversionTrigger">Conversion trigger</h4>
+                <p data-i18n="conversionTriggerText">Show one real intro or one real outcome, not a feature list.</p>
               </div>
             </div>
           </div>
@@ -358,105 +376,60 @@
           <div class="grid-2">
             <div class="panel">
               <div class="panel-head">
-                <h3>Privacy and permissions</h3>
+                <h3 data-i18n="privacyPermissions">Privacy and permissions</h3>
               </div>
               <div class="info-box">
-                <h4>Private by default</h4>
-                <p>No user should see another person’s full graph without permission.</p>
+                <h4 data-i18n="privateByDefault">Private by default</h4>
+                <p data-i18n="privateByDefaultText">No user should see another person’s full graph without permission.</p>
               </div>
               <div class="info-box">
-                <h4>Need-to-know access</h4>
-                <p>Users should see only what is required to complete the intro safely.</p>
+                <h4 data-i18n="needToKnow">Need-to-know access</h4>
+                <p data-i18n="needToKnowText">Users should see only what is required to complete the intro safely.</p>
               </div>
               <div class="info-box">
-                <h4>Audit-ready mindset</h4>
-                <p>In production, every sensitive action must be logged.</p>
+                <h4 data-i18n="auditReady">Audit-ready mindset</h4>
+                <p data-i18n="auditReadyText">In production, every sensitive action must be logged.</p>
+              </div>
+              <div class="info-box">
+                <h4 data-i18n="dataTypesProfile">Data types in profile</h4>
+                <p data-i18n="dataTypesProfileText">Email, phone, company, and sub-contacts can exist in the profile, but should only be visible to authorized roles.</p>
               </div>
             </div>
 
             <div class="panel">
               <div class="panel-head">
-                <h3>Security starter</h3>
+                <h3 data-i18n="securityStarter">Security starter</h3>
               </div>
               <div class="warning-box neutral">
-                <strong>Local-first demo only</strong>
-                <p>
-                  This MVP stores data in localStorage. For production use a secure backend,
-                  authentication, encryption, and server-side permission checks.
+                <strong data-i18n="localDemoOnly">Local-first demo only</strong>
+                <p data-i18n="localDemoOnlyText">
+                  This MVP stores data in localStorage. For production use a secure backend, authentication, encryption, and server-side permission checks.
                 </p>
               </div>
               <div class="warning-box alert">
-                <strong>No false promises</strong>
-                <p>
-                  No system can guarantee zero bugs forever. The right approach is least exposure,
-                  least privilege, and defense in depth.
+                <strong data-i18n="noFalsePromises">No false promises</strong>
+                <p data-i18n="noFalsePromisesText">
+                  No system can guarantee zero bugs forever. The right approach is least exposure, least privilege, and defense in depth.
                 </p>
               </div>
               <div class="password-box">
-                <span>Demo founder password example</span>
+                <span data-i18n="demoPassword">Demo founder password example</span>
                 <code>KnowWay!Founder2026#Private</code>
               </div>
-            </div>
-          </div>
-
-          <div class="panel">
-            <div class="panel-head">
-              <h3>Permission matrix</h3>
-            </div>
-            <div class="table-wrap">
-              <table class="permission-table">
-                <thead>
-                  <tr>
-                    <th>Role</th>
-                    <th>See routes</th>
-                    <th>See names</th>
-                    <th>Invite users</th>
-                    <th>Manage roles</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Guest</td>
-                    <td>Demo only</td>
-                    <td>No</td>
-                    <td>No</td>
-                    <td>No</td>
-                  </tr>
-                  <tr>
-                    <td>User</td>
-                    <td>Yes</td>
-                    <td>Own graph only</td>
-                    <td>No</td>
-                    <td>No</td>
-                  </tr>
-                  <tr>
-                    <td>Trusted Member</td>
-                    <td>Yes</td>
-                    <td>Limited</td>
-                    <td>Yes</td>
-                    <td>No</td>
-                  </tr>
-                  <tr>
-                    <td>Community Manager</td>
-                    <td>Yes</td>
-                    <td>Broader</td>
-                    <td>Yes</td>
-                    <td>Limited</td>
-                  </tr>
-                  <tr>
-                    <td>System Admin</td>
-                    <td>Yes</td>
-                    <td>Controlled</td>
-                    <td>Yes</td>
-                    <td>Yes</td>
-                  </tr>
-                </tbody>
-              </table>
             </div>
           </div>
         </section>
       </main>
     </div>
+
+    <template id="contactTemplate">
+      <div class="contact-row">
+        <input class="contact-name" type="text" placeholder="Contact name" />
+        <input class="contact-type" type="text" placeholder="Type (friend / lawyer / doctor)" />
+        <input class="contact-value" type="text" placeholder="Email / phone / note" />
+        <button class="ghost-btn small-btn remove-contact-btn" type="button">Remove</button>
+      </div>
+    </template>
 
     <script src="script.js"></script>
   </body>
